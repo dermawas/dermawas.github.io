@@ -3,5 +3,7 @@ layout: home
 title: "Welcome"
 ---
 
+> ⚠️ This site is still in progress — new articles will appear soon!
+
 Hi, I’m **Dermawan**.  
-This site is where I document my **DIY projects** and **process flows** — the thinking behind how things get built and work.
+Currently building this space to share my DIY projects and system thinking notes.
