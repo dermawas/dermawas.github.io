@@ -23,7 +23,7 @@ Static source for **dermawan.net**, a single-page personal landing card for Suse
 
 - **Head**: GA4 `gtag.js` snippet (Measurement ID hardcoded inline) + Google Fonts preconnect/link (Playfair Display for the name, Inter for everything else).
 - **Card body**: tagline → name → location → bio → a **Ventures** section (`.portfolio-list`) → footer.
-- **Ventures section**: nested `<ul>` structure — top-level ventures (Forstra Digital, FlowformLab) as `<li>`, with `.portfolio-sublist` used to nest a venture's products underneath it (e.g. Ledgerize under Forstra Digital) with an indent + left border. Each entry pairs a `.portfolio-link` with a `.portfolio-desc` line.
+- **Ventures section**: nested `<ul>` structure — top-level ventures (currently Forstra Digital) as `<li>`, with `.portfolio-sublist` used to nest a venture's products underneath it (e.g. Ledgerize under Forstra Digital) with an indent + left border. Each entry pairs a `.portfolio-link` with a `.portfolio-desc` line.
 - **Footer**: a LinkedIn link plus a QR code that encodes the *same* LinkedIn URL. The URL is duplicated in two places that must be kept in sync manually: the `href` on `.linkedin-link`, and the `LINKEDIN_URL` JS variable near the bottom of the file. The QR code itself is generated client-side (via the `qrcodejs` CDN library) into a hidden temp element, then copied onto the visible `<canvas id="qr-canvas">` — this indirection exists because `qrcodejs` doesn't render straight to a canvas element you supply.
 
 ## Conventions
