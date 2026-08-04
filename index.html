@@ -98,6 +98,65 @@
       margin-bottom: 2rem;
     }
 
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 10.5px;
+      font-weight: 500;
+      color: #8a8a8a;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .portfolio-list {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .portfolio-list > li {
+      margin-bottom: 1rem;
+    }
+
+    .portfolio-list > li:last-child {
+      margin-bottom: 0;
+    }
+
+    .portfolio-link {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #1e2d4a;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .portfolio-link:hover {
+      border-color: #c9a84c;
+    }
+
+    .portfolio-desc {
+      display: block;
+      font-size: 12px;
+      color: #8a8a8a;
+      line-height: 1.5;
+      margin-top: 0.15rem;
+    }
+
+    .portfolio-sublist {
+      list-style: none;
+      margin-top: 0.6rem;
+      padding-left: 1.1rem;
+      border-left: 1.5px solid #ddd8ce;
+    }
+
+    .portfolio-sublist .portfolio-link {
+      font-size: 12.5px;
+    }
+
+    .portfolio-sublist .portfolio-desc {
+      font-size: 11px;
+    }
+
     .card-footer {
       display: flex;
       align-items: flex-end;
@@ -176,6 +235,27 @@
       in programme governance, delivery structure, and cross-functional coherence
       across business, technical, and vendor layers.
     </p>
+
+    <hr class="divider">
+
+    <p class="section-label">Ventures</p>
+
+    <ul class="portfolio-list">
+      <li>
+        <a href="https://forstradigital.com" class="portfolio-link" target="_blank" rel="noopener noreferrer">Forstra Digital</a>
+        <span class="portfolio-desc">Co-founded boutique consultancy for Indonesian businesses &mdash; AI, cloud, and digital strategy.</span>
+        <ul class="portfolio-sublist">
+          <li>
+            <a href="https://forstradigital.com/ledgerize.html" class="portfolio-link" target="_blank" rel="noopener noreferrer">&#8618; Ledgerize</a>
+            <span class="portfolio-desc">Expense-tracking app with GnuCash sync, built and shipped under Forstra Digital.</span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://flowformlab.com" class="portfolio-link" target="_blank" rel="noopener noreferrer">FlowformLab</a>
+        <span class="portfolio-desc">Personal lab and working log, also home to a second consultancy practice.</span>
+      </li>
+    </ul>
 
     <div class="card-footer">
       <a href="https://linkedin.com/in/suseno" class="linkedin-link" target="_blank" rel="noopener noreferrer">
