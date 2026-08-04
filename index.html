@@ -197,6 +197,8 @@
     }
 
     .qr-wrap canvas {
+      width: 72px;
+      height: 72px;
       border-radius: 4px;
       display: block;
     }
@@ -211,6 +213,50 @@
     @media (max-width: 480px) {
       .card { padding: 2rem 1.75rem 1.75rem; }
       .name { font-size: 24px; }
+    }
+
+    /* Desktop: landscape "ID card" layout — QR stands in for a photo panel on the left. */
+    @media (min-width: 700px) {
+      .card {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        column-gap: 2.75rem;
+        grid-template-areas:
+          "photo accent"
+          "photo tagline"
+          "photo name"
+          "photo location"
+          "ventureslabel divider1"
+          "ventures bio"
+          "divider2 divider2"
+          "linkedin linkedin";
+        max-width: 860px;
+        padding: 3rem;
+      }
+
+      .accent-bar { grid-area: accent; }
+      .tagline { grid-area: tagline; }
+      .name { grid-area: name; font-size: 32px; }
+      .location { grid-area: location; }
+      .divider:nth-of-type(1) { grid-area: divider1; }
+      .bio { grid-area: bio; }
+      .divider:nth-of-type(2) { grid-area: divider2; }
+      .section-label { grid-area: ventureslabel; margin-top: 1.25rem; }
+      .portfolio-list { grid-area: ventures; margin-bottom: 0; }
+
+      .card-footer { display: contents; }
+      .linkedin-link { grid-area: linkedin; margin-top: 2rem; }
+
+      .qr-wrap {
+        grid-area: photo;
+        background: #1e2d4a;
+        border-radius: 10px;
+        justify-content: center;
+        padding: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+      .qr-wrap canvas { width: 130px; height: 130px; }
+      .qr-label { color: rgba(248, 245, 239, 0.55); }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -270,7 +316,7 @@
       </a>
 
       <div class="qr-wrap">
-        <canvas id="qr-canvas" width="72" height="72"></canvas>
+        <canvas id="qr-canvas" width="216" height="216"></canvas>
         <span class="qr-label">scan to connect</span>
       </div>
     </div>
@@ -280,7 +326,7 @@
   <script>
     (function () {
       var LINKEDIN_URL = 'https://linkedin.com/in/suseno';
-      var SIZE = 72;
+      var SIZE = 216;
 
       function renderQR() {
         if (typeof QRCode === 'undefined') {
